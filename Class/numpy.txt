@@ -1,0 +1,55 @@
+주피터 깔려있네.. 왜지?
+
+numpy : colum, row 
+숫자를 다룸
+
+install --> !pip install numpy
+
+numpy.ndarray: 디테일
+ndim : number of dimenstion 2차배열 3차배열...
+-shape : row, col개수 반환
+array.size :어레이의 숫자개수
+dtype :tpye
+
+
+array만들기
+numpy.arry([i for i in range(1,13)])
+
+--> numpy.arry([i for i in range(1,13)]).reshape((2,3,2))
+: 2개의 어레이 -  3*2의 어레이 2개
+1  2          7  8
+3  4          9  10
+5  6          11 12
+
+
+.min, .max, .mean. median
+
+
+
+**
+operation using numpy arrays
+
+array 1= numpy.arange(9).reshape(3,3)
+array2 = nummpy.ones((3,3), dtype=numpy.int32)
+0 1 2
+3 4 5
+6 7 8
+
+1 1 1
+1 1 1 
+1 1 1 
+array*1 array2
+ 0 1 2
+3 4 5
+6 7 8
+
+
+print ((array1*array2)/2.)
+print((array1*array2)/2)
+0.  0.5  1.
+1.5 2. 2.5
+3. 3.5 4.
+
+0. 0.5 1
+1.5 2 2.5
+3. 3.5 4.

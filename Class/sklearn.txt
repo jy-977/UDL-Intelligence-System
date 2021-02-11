@@ -1,0 +1,44 @@
+train, tes = trian-test_split(iris_dataset, test_size =0.2, randomsate=42)
+
+iris이터셋에서 2개의 데이터를 무작위로
+
+
+supevise learning
+
+machine learning : supervise algo & supervise
+
+supervise learning : 찾으려는거..?
+label을 추정할수있다.
+
+
+clustering : 
+groups of clients
+비슷한 거끼리 묶여있음
+
+
+classification
+DicisionTree
+--> 질문을 통해 분류
+
+ex)
+dt_classifier = DecisionTreeClassifier(
+ criterion = "gini", 
+max_depth = 3,
+min_examples_leaf =10,
+random_stat=42 --> 
+}
+
+
+DecisionTreeClassifier(max_depth=3, min_samples_leaf =10, random_state=42)
+
+
+X_trains = train.drop(
+--> fetures of each row
+Y_trains = train["label"]
+--> targets of each row
+dt_classifier.fit(X_train, y_train)
+==> 
+
+
+naive bayes 
+

@@ -1,0 +1,94 @@
+largedata set 
+
+Series : one dimensional data
+DataFrame : multi dimensions
+
+pandas.Series([1,2,3,4])
+0   1 --> 0번째값 1이라는 의미
+1   2
+2   3
+3   4
+dtype:int 64
+
+pandas.DataFrame([[1,2,3],[4,5,6]]))
+two dimensions:
+   0  1  2
+0  1  2 3
+1  4  5 6
+
+
+data=[[1,2,3],[4,5,6]]
+print(pandas.DataFrame(data, colums=["c1","c2","c3"], index=["user1", "user2"])
+        c1 c2 c3
+user1 1   2   3
+user2 4   5   6
+데이터셋을 이렇게 만듦
+
+data2={
+"c1" :["a","b","c"],
+"c2" :[1,2,3],
+"c3":[1.,2.,3.]
+}
+--> 이렇게 각 열을 설정해줄수도있다 
+c1 c2 c3 
+0 a 1 1.0
+1 b 2 2.0
+2 c 3 3.0
+
+
+
+Accessing values
+
+data={
+"c1":[1,4],
+"c2":[2,5],
+...
+}
+
+dataframe=pandas.DataFrame(data,index=["user1","user2"])
+dataframe["c2"]
+user1 2
+user2 5
+name : c2, dtype:int64
+
+dataframe.loc["user1", "c2"]
+--> 값 하나에만 접근할때
+
+numeric index
+--> dataframe.iloc[0,1]
+
+multiple colums에 접근
+iris = pandas.read_cvs('http://raw.!~~~.cvs')
+print(iris.shae)
+iris.head() --> 첫 5줄 (row)만 출력
+iris.tail()--> 마지막 다섯줄
+
+iris[["colum1 ", "colum2"]].head
+--> 열2개 접근, 5줄만 출력
+
+
+
+** row 필터링
+iris[iris["species"]=="verginica"
+species column 에서 verginica만 필터링
+
+indices = iris[iris["species"]=="verginica"
+true false로 난타냄
+0 false
+1 false
+2 false 
+3 false
+4 true 
+
+
+iris[indicies]
+--> indices 가 참인 row들을 데이터 전체로 보여줌
+db의 select처럼
+
+
+iris[iris["sepal_length"]<4.5
+이 열의 숫자가 4.5보다 작은 record들을 전체 보여줌
+
+
+
+
